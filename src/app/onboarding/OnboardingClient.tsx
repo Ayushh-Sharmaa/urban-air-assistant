@@ -285,8 +285,8 @@ export default function OnboardingClient() {
             </div>
 
             {data.shareHealthConsent && (
-              <div style={{ padding: "0.75rem", background: "rgba(20,33,61,0.03)", borderRadius: "8px", marginBottom: "1rem" }}>
-                <span className="text-sm font-bold mb-2 block" style={{ color: "var(--navy)" }}>
+              <div style={{ padding: "0.75rem", background: "rgba(11,19,36,0.6)", border: "1px solid var(--border)", borderRadius: "8px", marginBottom: "1rem" }}>
+                <span className="text-sm font-bold mb-2 block" style={{ color: "var(--cream)" }}>
                   Select applicable groups in your household:
                 </span>
                 <div style={{ display: "grid", gap: "0.5rem" }}>

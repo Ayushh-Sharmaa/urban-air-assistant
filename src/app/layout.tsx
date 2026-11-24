@@ -35,6 +35,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body>
+        <div className="noise-overlay" aria-hidden="true" />
+        <div className="coral-aurora-beam" aria-hidden="true" />
+        <div className="coral-orb-secondary" aria-hidden="true" />
         <Header />
         <main id="main-content">
           {children}

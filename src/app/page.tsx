@@ -102,7 +102,7 @@ export default async function HomePage({
         {/* Welcome briefing */}
         <div className="flex justify-between items-baseline mb-4 flex-wrap gap-2">
           <div>
-            <h2 style={{ fontSize: "1.6rem", margin: 0, color: "var(--navy)" }}>
+            <h2 style={{ fontSize: "1.6rem", margin: 0, color: "var(--cream)" }}>
               Environmental Intelligence Dashboard
             </h2>
             <span className="text-xs text-muted">
@@ -169,7 +169,7 @@ export default async function HomePage({
                       style={{ borderLeft: `3px solid var(--coral)` }}
                     >
                       <div style={{ flex: 1 }}>
-                        <div style={{ fontWeight: 700, fontSize: ".92rem", color: "var(--navy)" }}>
+                        <div style={{ fontWeight: 700, fontSize: ".92rem", color: "var(--cream)" }}>
                           {a.action}
                         </div>
                         <div className="text-xs text-muted mt-0.5">{a.reason}</div>
@@ -209,8 +209,8 @@ export default async function HomePage({
         )}
 
         {/* Editorial Scroll Storytelling Section */}
-        <div className="card mb-4" style={{ background: "#faf7f2", border: "1.5px solid var(--border)" }}>
-          <h3 style={{ fontSize: "1.25rem", marginBottom: ".4rem", color: "var(--navy)" }}>
+        <div className="card mb-4" style={{ border: "1.5px solid var(--border)" }}>
+          <h3 style={{ fontSize: "1.25rem", marginBottom: ".4rem", color: "var(--cream)" }}>
             Why Standard AQI Dashboards Fail Urban Families
           </h3>
           <p className="text-sm text-muted mb-3" style={{ maxWidth: 760 }}>
@@ -222,7 +222,7 @@ export default async function HomePage({
           <div className="grid-3 gap-2">
             <div className="card-flat rounded p-2">
               <Activity size={20} className="text-coral mb-1" />
-              <strong className="text-sm block" style={{ color: "var(--navy)" }}>
+              <strong className="text-sm block" style={{ color: "var(--cream)" }}>
                 Atmospheric Dynamics
               </strong>
               <p className="text-xs text-muted mt-1">
@@ -232,7 +232,7 @@ export default async function HomePage({
 
             <div className="card-flat rounded p-2">
               <ShieldCheck size={20} className="text-coral mb-1" />
-              <strong className="text-sm block" style={{ color: "var(--navy)" }}>
+              <strong className="text-sm block" style={{ color: "var(--cream)" }}>
                 Indoor Defense vs. Myths
               </strong>
               <p className="text-xs text-muted mt-1">
@@ -242,7 +242,7 @@ export default async function HomePage({
 
             <div className="card-flat rounded p-2">
               <Flame size={20} className="text-coral mb-1" />
-              <strong className="text-sm block" style={{ color: "var(--navy)" }}>
+              <strong className="text-sm block" style={{ color: "var(--cream)" }}>
                 Emissions vs. Inhalation
               </strong>
               <p className="text-xs text-muted mt-1">
@@ -299,7 +299,7 @@ export default async function HomePage({
               <div className="card card-hover" style={{ height: "100%", display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
                 <div>
                   <f.icon size={26} style={{ color: "var(--coral)", marginBottom: ".6rem" }} />
-                  <h4 style={{ fontSize: "1.05rem", marginBottom: ".35rem", color: "var(--navy)" }}>
+                  <h4 style={{ fontSize: "1.05rem", marginBottom: ".35rem", color: "var(--cream)" }}>
                     {f.title}
                   </h4>
                   <p className="text-xs text-muted" style={{ lineHeight: 1.55 }}>

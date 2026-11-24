@@ -46,22 +46,22 @@ export default function PlannerPanel({ plan }: Props) {
       </div>
 
       {/* Daily Progress Visualizer */}
-      <div className="card-flat rounded p-2 mb-3" style={{ background: "#fff" }}>
+      <div className="card-flat rounded p-2 mb-3" style={{ background: "rgba(11, 19, 36, 0.75)" }}>
         <div className="flex justify-between items-center mb-1.5">
           <div className="flex items-center gap-1.5">
             <Sparkles size={14} className="text-coral" />
             <strong className="text-xs uppercase tracking-wider text-muted">Daily Smog Defense Execution</strong>
           </div>
-          <span className="text-xs font-bold" style={{ color: "var(--navy)" }}>
+          <span className="text-xs font-bold" style={{ color: "var(--cream)" }}>
             {totalDone} of {totalActions} completed ({completionPercentage}%)
           </span>
         </div>
-        <div style={{ height: 8, borderRadius: 999, background: "var(--border)", overflow: "hidden" }}>
+        <div style={{ height: 8, borderRadius: 999, background: "rgba(244, 237, 224, 0.12)", overflow: "hidden" }}>
           <div
             style={{
               width: `${completionPercentage}%`,
               height: "100%",
-              background: "var(--ok)",
+              background: "linear-gradient(90deg, var(--coral), var(--ok))",
               transition: "width .4s ease",
             }}
           />
@@ -122,7 +122,7 @@ export default function PlannerPanel({ plan }: Props) {
                       className="check-title"
                       style={{
                         textDecoration: done ? "line-through" : undefined,
-                        color: done ? "var(--muted)" : "var(--navy)",
+                        color: done ? "var(--muted)" : "var(--cream)",
                         fontWeight: 700,
                         fontSize: ".94rem",
                       }}
@@ -135,8 +135,9 @@ export default function PlannerPanel({ plan }: Props) {
                         className="badge"
                         style={{
                           fontSize: ".65rem",
-                          background: isExposure ? "#e8edf5" : "#e3f3ea",
-                          color: isExposure ? "var(--navy)" : "var(--ok)",
+                          background: isExposure ? "rgba(255, 107, 91, 0.14)" : "rgba(46, 158, 102, 0.16)",
+                          color: isExposure ? "var(--coral)" : "var(--ok)",
+                          border: `1px solid ${isExposure ? "rgba(255, 107, 91, 0.25)" : "rgba(46, 158, 102, 0.25)"}`,
                         }}
                       >
                         {isExposure ? "Exposure Reduction" : "Emissions Mitigation"}
@@ -179,19 +180,19 @@ export default function PlannerPanel({ plan }: Props) {
                       className="card-flat rounded p-2 mt-2"
                       style={{
                         fontSize: ".82rem",
-                        background: "#faf8f5",
-                        color: "var(--navy)",
+                        background: "rgba(11, 19, 36, 0.85)",
+                        color: "var(--cream)",
                         borderLeft: "2px solid var(--coral)",
                       }}
                     >
                       <p className="mb-1">
-                        <strong>SCIENTIFIC REASON:</strong> {action.reason}
+                        <strong style={{ color: "var(--coral)" }}>SCIENTIFIC REASON:</strong> {action.reason}
                       </p>
                       <p className="mb-1">
-                        <strong>EXPECTED BENEFIT:</strong> {action.expectedBenefit}
+                        <strong style={{ color: "var(--cream)" }}>EXPECTED BENEFIT:</strong> {action.expectedBenefit}
                       </p>
                       <p>
-                        <strong>EVIDENCE CITATION:</strong> {action.source}
+                        <strong style={{ color: "var(--cream-muted)" }}>EVIDENCE CITATION:</strong> {action.source}
                       </p>
                     </div>
                   )}

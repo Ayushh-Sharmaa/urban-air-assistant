@@ -202,7 +202,7 @@ export default function IndoorClient() {
                 <span className="text-xs font-bold text-muted uppercase tracking-wider">
                   {roomLength}m × {roomWidth}m ({area} m²)
                 </span>
-                <span className="text-sm font-bold mt-1" style={{ color: "var(--navy)" }}>
+                <span className="text-sm font-bold mt-1" style={{ color: "var(--cream)" }}>
                   {volumeM3} m³ Volume
                 </span>
                 <span className="text-xs text-muted">Ceiling: {heightM}m</span>
@@ -288,7 +288,7 @@ export default function IndoorClient() {
                 </h2>
                 <div className="grid-3 mb-2">
                   <div className="card-flat rounded p-2 text-center">
-                    <div style={{ fontSize: "1.5rem", fontWeight: 800, color: "var(--navy)" }}>
+                    <div style={{ fontSize: "1.5rem", fontWeight: 800, color: "var(--cream)" }}>
                       {result.cadr.roomVolumeCubicM} m³
                     </div>
                     <div className="text-xs text-muted">Room Volume</div>

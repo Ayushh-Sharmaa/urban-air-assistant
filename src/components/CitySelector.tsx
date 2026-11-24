@@ -49,15 +49,16 @@ export default function CitySelector({ currentCity, cities }: Props) {
           style={{
             padding: ".55rem .9rem",
             borderRadius: 8,
-            border: "1px solid rgba(255,255,255,.25)",
-            background: "#14213d",
-            color: "#fff",
+            border: "1px solid rgba(244, 237, 224, 0.25)",
+            background: "rgba(11, 19, 36, 0.85)",
+            color: "var(--cream)",
             fontSize: ".92rem",
             cursor: "pointer",
+            transition: "all var(--transition)",
           }}
         >
           {cities.map((c) => (
-            <option key={c} value={c} style={{ color: "#fff", background: "#14213d" }}>
+            <option key={c} value={c} style={{ color: "#F4EDE0", background: "#14213D" }}>
               {c} (Continuous Ambient)
             </option>
           ))}

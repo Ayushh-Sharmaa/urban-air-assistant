@@ -72,7 +72,7 @@ export default function AirBriefingModal({ aqiData, weather, city }: Props) {
                   <span className="badge badge-demo">DECISION INTELLIGENCE REPORT</span>
                   {aqiData?.isDemo && <span className="badge badge-demo">DEMO DATA</span>}
                 </div>
-                <h2 id="briefing-title" style={{ fontSize: "1.4rem", margin: ".3rem 0 0", color: "var(--navy)" }}>
+                <h2 id="briefing-title" style={{ fontSize: "1.4rem", margin: ".3rem 0 0", color: "var(--cream)" }}>
                   Daily Air Quality Briefing — {city}
                 </h2>
                 <span className="text-xs text-muted">
@@ -103,7 +103,7 @@ export default function AirBriefingModal({ aqiData, weather, city }: Props) {
             {generating ? (
               <div className="briefing-loader-wrap">
                 <div className="circular-spinner mb-3" />
-                <h3 style={{ fontSize: "1.05rem", color: "var(--navy)" }}>
+                <h3 style={{ fontSize: "1.05rem", color: "var(--cream)" }}>
                   {GENERATION_STEPS[stepIndex]}
                 </h3>
                 <p className="text-xs text-muted mt-1">
@@ -181,7 +181,7 @@ export default function AirBriefingModal({ aqiData, weather, city }: Props) {
                       <div key={act.id} className="card-flat rounded p-2 flex items-start gap-2">
                         <div className="step-number">{i + 1}</div>
                         <div style={{ flex: 1 }}>
-                          <strong className="text-sm block" style={{ color: "var(--navy)" }}>{act.action}</strong>
+                          <strong className="text-sm block" style={{ color: "var(--cream)" }}>{act.action}</strong>
                           <span className="text-xs text-muted block mt-0.5">{act.reason}</span>
                           <span className="text-xs" style={{ color: "var(--ok)", fontWeight: 600 }}>Expected benefit: {act.expectedBenefit}</span>
                         </div>
@@ -197,7 +197,7 @@ export default function AirBriefingModal({ aqiData, weather, city }: Props) {
                     <h4>4. Your Indoor Air Defense Strategy</h4>
                   </div>
                   <div className="card-flat rounded p-2 mt-2">
-                    <p className="text-xs" style={{ color: "var(--navy)", lineHeight: 1.6 }}>
+                    <p className="text-xs" style={{ color: "var(--cream-muted)", lineHeight: 1.6 }}>
                       • <strong>Ventilation Timing:</strong> {isSevere ? "Keep windows strictly closed today." : "Open cross-ventilation windows exclusively between 10:00 AM and 12:00 PM when boundary layer convective mixing dilutes ground pollutants."}<br />
                       • <strong>Filtration:</strong> Run HEPA H13 purifiers in bedrooms on medium/high speed during sleeping hours.<br />
                       • <strong>Cooking & Combustion:</strong> Avoid biomass, incense sticks, and indoor smoking which generate acute PM2.5 spikes up to 800 µg/m³.<br />
@@ -215,7 +215,7 @@ export default function AirBriefingModal({ aqiData, weather, city }: Props) {
                   <div className="card-flat rounded p-2 mt-2 flex justify-between items-center">
                     <div>
                       <strong className="text-xs text-muted uppercase">Recommended Mode Switch</strong>
-                      <div className="text-sm font-bold" style={{ color: "var(--navy)" }}>Metro or Electric Public Transit</div>
+                      <div className="text-sm font-bold" style={{ color: "var(--cream)" }}>Metro or Electric Public Transit</div>
                       <span className="text-xs text-muted">Reduces commute footprint by ~84% vs. solo petrol car</span>
                     </div>
                     <div className="badge badge-live">

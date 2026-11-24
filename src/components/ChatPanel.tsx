@@ -128,7 +128,7 @@ export default function ChatPanel({ initialAqi, city, aqiLabel }: Props) {
                     p: ({ children }) => <p style={{ margin: ".3rem 0", lineHeight: 1.6 }}>{children}</p>,
                     ul: ({ children }) => <ul style={{ paddingLeft: "1.2rem", margin: ".4rem 0" }}>{children}</ul>,
                     li: ({ children }) => <li style={{ margin: ".2rem 0" }}>{children}</li>,
-                    strong: ({ children }) => <strong style={{ color: "var(--navy)", fontWeight: 700 }}>{children}</strong>,
+                    strong: ({ children }) => <strong style={{ color: "var(--cream)", fontWeight: 700 }}>{children}</strong>,
                   }}
                 >
                   {m.content}
@@ -136,7 +136,7 @@ export default function ChatPanel({ initialAqi, city, aqiLabel }: Props) {
 
                 {/* Signature Feature: Explainable AI (XAI) Drawer */}
                 {m.explanation && (
-                  <div className="mt-3 pt-2" style={{ borderTop: "1px dashed rgba(20, 33, 61, 0.15)" }}>
+                  <div className="mt-3 pt-2" style={{ borderTop: "1px dashed rgba(244, 237, 224, 0.15)" }}>
                     <button
                       onClick={() =>
                         setExpandedExplanationIndex(expandedExplanationIndex === i ? null : i)
@@ -154,9 +154,9 @@ export default function ChatPanel({ initialAqi, city, aqiLabel }: Props) {
                       <div
                         className="card-flat rounded p-2 mt-2"
                         style={{
-                          background: "#fff",
+                          background: "rgba(11, 19, 36, 0.85)",
                           fontSize: ".8rem",
-                          color: "var(--navy)",
+                          color: "var(--cream)",
                           borderLeft: "3px solid var(--coral)",
                         }}
                       >

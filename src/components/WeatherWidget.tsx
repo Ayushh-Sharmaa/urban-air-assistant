@@ -16,11 +16,11 @@ export default function WeatherWidget({ data }: Props) {
   if (!data) return null;
 
   return (
-    <div className="card card-hover" style={{ background: "#ffffff", border: "1px solid var(--border)" }}>
+    <div className="card card-hover">
       <div className="flex justify-between items-center mb-3 flex-wrap gap-2">
         <div className="flex items-center gap-2">
           <Layers size={18} className="text-coral" />
-          <h3 style={{ fontSize: "1.08rem", fontWeight: 800, margin: 0, color: "var(--navy)" }}>
+          <h3 style={{ fontSize: "1.08rem", fontWeight: 800, margin: 0, color: "var(--cream)" }}>
             Atmospheric Context & Nocturnal Inversion Stagnation
           </h3>
         </div>
@@ -36,33 +36,33 @@ export default function WeatherWidget({ data }: Props) {
       <div className="grid-2 gap-3" style={{ alignItems: "center" }}>
         {/* Weather parameters */}
         <div className="grid" style={{ gridTemplateColumns: "repeat(auto-fit, minmax(110px, 1fr))", gap: ".6rem" }}>
-          <div className="card-flat rounded p-2 text-center">
+          <div className="card-flat rounded p-2 text-center" style={{ background: "rgba(11, 19, 36, 0.65)" }}>
             <Thermometer size={16} style={{ color: "var(--coral)", margin: "0 auto" }} />
-            <div className="text-sm font-bold mt-1" style={{ color: "var(--navy)" }}>
+            <div className="text-sm font-bold mt-1" style={{ color: "var(--cream)" }}>
               {data.temperatureC}°C
             </div>
             <span className="text-xs text-muted">Ambient Temp</span>
           </div>
 
-          <div className="card-flat rounded p-2 text-center">
-            <Droplets size={16} style={{ color: "#1565c0", margin: "0 auto" }} />
-            <div className="text-sm font-bold mt-1" style={{ color: "var(--navy)" }}>
+          <div className="card-flat rounded p-2 text-center" style={{ background: "rgba(11, 19, 36, 0.65)" }}>
+            <Droplets size={16} style={{ color: "#42a5f5", margin: "0 auto" }} />
+            <div className="text-sm font-bold mt-1" style={{ color: "var(--cream)" }}>
               {data.humidity}%
             </div>
             <span className="text-xs text-muted">Humidity (RH)</span>
           </div>
 
-          <div className="card-flat rounded p-2 text-center">
-            <Wind size={16} style={{ color: "var(--navy)", margin: "0 auto" }} />
-            <div className="text-sm font-bold mt-1" style={{ color: "var(--navy)" }}>
+          <div className="card-flat rounded p-2 text-center" style={{ background: "rgba(11, 19, 36, 0.65)" }}>
+            <Wind size={16} style={{ color: "var(--coral)", margin: "0 auto" }} />
+            <div className="text-sm font-bold mt-1" style={{ color: "var(--cream)" }}>
               {data.windSpeedKmh} <span className="text-xs">km/h</span>
             </div>
             <span className="text-xs text-muted">Surface Velocity</span>
           </div>
 
-          <div className="card-flat rounded p-2 text-center">
+          <div className="card-flat rounded p-2 text-center" style={{ background: "rgba(11, 19, 36, 0.65)" }}>
             <Compass size={16} style={{ color: "var(--coral)", margin: "0 auto" }} />
-            <div className="text-sm font-bold mt-1" style={{ color: "var(--navy)" }}>
+            <div className="text-sm font-bold mt-1" style={{ color: "var(--cream)" }}>
               {data.windDirection}
             </div>
             <span className="text-xs text-muted">Wind Trajectory</span>
@@ -70,14 +70,14 @@ export default function WeatherWidget({ data }: Props) {
         </div>
 
         {/* Smog Stagnation Assessment */}
-        <div className="card-flat rounded p-2" style={{ background: "#fbf9f5" }}>
+        <div className="card-flat rounded p-2" style={{ background: "rgba(11, 19, 36, 0.75)", borderLeft: "3px solid var(--coral)" }}>
           <div className="flex items-center gap-1.5 mb-1">
             <AlertTriangle size={14} style={{ color: RISK_COLOR[data.smogRisk] }} />
-            <strong className="text-xs uppercase tracking-wider" style={{ color: "var(--navy)" }}>
+            <strong className="text-xs uppercase tracking-wider" style={{ color: "var(--cream)" }}>
               Dispersion Model Analysis
             </strong>
           </div>
-          <p className="text-xs" style={{ color: "var(--navy)", lineHeight: 1.55 }}>
+          <p className="text-xs" style={{ color: "var(--cream-muted)", lineHeight: 1.55 }}>
             {data.smogRiskReason}
           </p>
           <div className="text-xs text-muted mt-2 pt-1 border-bottom flex items-center gap-1">

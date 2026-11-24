@@ -191,7 +191,7 @@ function PollutantMini({
     <div
       className="card-flat rounded p-2 text-center"
       style={{
-        background: isMain ? "rgba(255, 107, 91, 0.05)" : "#fff",
+        background: isMain ? "rgba(255, 107, 91, 0.12)" : "rgba(11, 19, 36, 0.65)",
         borderColor: isMain ? "var(--coral)" : "var(--border)",
       }}
     >
@@ -205,7 +205,7 @@ function PollutantMini({
       </div>
       <div
         className="pollutant-value mt-1"
-        style={{ fontSize: "1.4rem", fontWeight: 800, color: isOver ? "var(--err)" : "var(--navy)" }}
+        style={{ fontSize: "1.4rem", fontWeight: 800, color: isOver ? "var(--err)" : "var(--cream)" }}
       >
         {value}
       </div>

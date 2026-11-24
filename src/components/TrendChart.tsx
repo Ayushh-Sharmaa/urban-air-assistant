@@ -39,7 +39,7 @@ export default function TrendChart({ data, currentHour }: Props) {
     <div className="card card-hover">
       <div className="flex justify-between items-center mb-3 flex-wrap gap-2">
         <div>
-          <h3 style={{ fontSize: "1.1rem", fontWeight: 800, margin: 0, color: "var(--navy)" }}>
+          <h3 style={{ fontSize: "1.1rem", fontWeight: 800, margin: 0, color: "var(--cream)" }}>
             Pollution Trajectory & Historical Trends
           </h3>
           <span className="text-xs text-muted">
@@ -49,7 +49,7 @@ export default function TrendChart({ data, currentHour }: Props) {
 
         <div className="flex gap-2 items-center flex-wrap">
           {/* Timeframe switch */}
-          <div className="flex gap-1" style={{ background: "#f0ece4", padding: "2px", borderRadius: "6px" }}>
+          <div className="flex gap-1" style={{ background: "rgba(11, 19, 36, 0.7)", border: "1px solid var(--border)", padding: "2px", borderRadius: "6px" }}>
             <button
               className={`btn btn-sm ${timeframe === "24h" ? "" : "btn-ghost"}`}
               style={{ padding: ".3rem .6rem", fontSize: ".76rem", border: "none" }}
@@ -89,29 +89,30 @@ export default function TrendChart({ data, currentHour }: Props) {
         <AreaChart data={displayData} margin={{ top: 10, right: 15, left: -15, bottom: 0 }}>
           <defs>
             <linearGradient id="areaGradient" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="5%" stopColor={config.color} stopOpacity={0.3} />
+              <stop offset="5%" stopColor={config.color} stopOpacity={0.35} />
               <stop offset="95%" stopColor={config.color} stopOpacity={0.0} />
             </linearGradient>
           </defs>
-          <CartesianGrid strokeDasharray="3 3" stroke="#e6decb" />
-          <XAxis dataKey="hour" tick={{ fontSize: 11, fill: "#6b7280" }} interval={timeframe === "24h" ? 3 : 0} />
-          <YAxis tick={{ fontSize: 11, fill: "#6b7280" }} />
+          <CartesianGrid strokeDasharray="3 3" stroke="rgba(244, 237, 224, 0.08)" />
+          <XAxis dataKey="hour" tick={{ fontSize: 11, fill: "rgba(244, 237, 224, 0.6)" }} interval={timeframe === "24h" ? 3 : 0} />
+          <YAxis tick={{ fontSize: 11, fill: "rgba(244, 237, 224, 0.6)" }} />
           <Tooltip
             contentStyle={{
-              background: "#fff",
-              border: "1px solid #e2d9cc",
+              background: "#14213d",
+              border: "1px solid rgba(244, 237, 224, 0.25)",
               borderRadius: 8,
               fontSize: 12,
-              boxShadow: "0 4px 12px rgba(0,0,0,0.1)",
+              color: "#F4EDE0",
+              boxShadow: "0 8px 24px rgba(0,0,0,0.5)",
             }}
             formatter={(val) => [`${Number(val ?? 0)}`, config.label]}
           />
           {currentHour && timeframe === "24h" && (
             <ReferenceLine
               x={currentHour}
-              stroke="var(--navy)"
+              stroke="var(--cream)"
               strokeDasharray="4 4"
-              label={{ value: "Now", fill: "var(--navy)", fontSize: 11 }}
+              label={{ value: "Now", fill: "var(--cream)", fontSize: 11 }}
             />
           )}
           <ReferenceLine

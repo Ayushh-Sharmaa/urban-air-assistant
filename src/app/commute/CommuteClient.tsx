@@ -119,16 +119,16 @@ export default function CommutePage() {
         <div style={{ overflowX: "auto" }}>
           <table style={{ width: "100%", borderCollapse: "collapse", fontSize: ".87rem" }} role="table" aria-label="Transport options comparison">
             <thead>
-              <tr style={{ background: "#f8f4ee" }}>
-                <th style={{ padding: ".6rem .75rem", textAlign: "left" }}>Mode</th>
-                <th style={{ padding: ".6rem .75rem", textAlign: "left" }}>CO₂e/km</th>
-                <th style={{ padding: ".6rem .75rem", textAlign: "left" }}>Severe AQI</th>
-                <th style={{ padding: ".6rem .75rem", textAlign: "left" }}>Notes</th>
+              <tr style={{ background: "rgba(11, 19, 36, 0.9)", borderBottom: "1px solid var(--border)" }}>
+                <th style={{ padding: ".6rem .75rem", textAlign: "left", color: "var(--cream)" }}>Mode</th>
+                <th style={{ padding: ".6rem .75rem", textAlign: "left", color: "var(--cream)" }}>CO₂e/km</th>
+                <th style={{ padding: ".6rem .75rem", textAlign: "left", color: "var(--cream)" }}>Severe AQI</th>
+                <th style={{ padding: ".6rem .75rem", textAlign: "left", color: "var(--cream)" }}>Notes</th>
               </tr>
             </thead>
             <tbody>
               {advice.options.map((opt, i) => (
-                <tr key={opt.mode} style={{ background: i % 2 === 0 ? "#fff" : "#fafafa", borderTop: "1px solid var(--border)" }}>
+                <tr key={opt.mode} style={{ background: i % 2 === 0 ? "rgba(20, 33, 61, 0.4)" : "rgba(14, 24, 46, 0.6)", borderTop: "1px solid var(--border)" }}>
                   <td style={{ padding: ".6rem .75rem", fontWeight: 600 }}>
                     {opt.label}
                     {opt.recommended && <span className="badge badge-live" style={{ marginLeft: ".4rem", fontSize: ".65rem" }}>Recommended</span>}

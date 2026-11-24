@@ -130,12 +130,12 @@ export default function HackathonDemoBar() {
               Explore how URBAN AIR solves winter smog through deterministic CPCB calculations, verified health guidance, and actionable lifestyle intelligence.
             </p>
 
-            <div className="walkthrough-step-card mb-3">
+            <div className="walkthrough-step-card mb-3" style={{ background: "rgba(11, 19, 36, 0.75)", border: "1px solid var(--border)", borderRadius: "var(--radius-sm)", padding: "1.2rem" }}>
               <span className="badge badge-new mb-2">{WALKTHROUGH_STEPS[walkthroughStep].badge}</span>
-              <h4 style={{ fontSize: "1rem", marginBottom: ".3rem", color: "var(--navy)" }}>
+              <h4 style={{ fontSize: "1rem", marginBottom: ".3rem", color: "var(--cream)" }}>
                 {WALKTHROUGH_STEPS[walkthroughStep].title}
               </h4>
-              <p className="text-sm" style={{ color: "var(--navy)", lineHeight: 1.55 }}>
+              <p className="text-sm" style={{ color: "var(--cream-muted)", lineHeight: 1.55 }}>
                 {WALKTHROUGH_STEPS[walkthroughStep].description}
               </p>
             </div>
