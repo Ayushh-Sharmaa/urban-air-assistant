@@ -1,0 +1,17 @@
+{
+  "name": "Urban Air Quality Assistant",
+  "short_name": "UrbanAir",
+  "description": "Indian Smog & AQI Daily Guidance and Decision Platform",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F4EDE0",
+  "theme_color": "#14213d",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
+
