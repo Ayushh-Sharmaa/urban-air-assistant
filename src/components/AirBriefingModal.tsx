@@ -242,3 +242,4 @@ export default function AirBriefingModal({ aqiData, weather, city }: Props) {
     </>
   );
 }
+

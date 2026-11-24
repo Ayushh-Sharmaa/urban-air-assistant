@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, Suspense } from "react";
 import { Wind, Menu, X, Home, Calendar, House, Car, BarChart2, MessageSquare, Users, BookOpen, HeartHandshake, Layers } from "lucide-react";
 import { usePathname } from "next/navigation";
 import HackathonDemoBar from "./HackathonDemoBar";
@@ -55,7 +55,9 @@ export default function Header() {
 
   return (
     <>
-      <HackathonDemoBar />
+      <Suspense fallback={null}>
+        <HackathonDemoBar />
+      </Suspense>
       <header className="header">
         <div className="container">
           <Link href="/" className="logo" aria-label="URBAN AIR — Environmental Intelligence">
